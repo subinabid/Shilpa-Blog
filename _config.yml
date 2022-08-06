@@ -1,0 +1,53 @@
+title: Shilpa's Blog  # Page Header with full_logo: true
+short_logo: SMD.      # Other PAges Haader
+description: >        # Site description
+  Shilpa's blogs - Banking and beyond.
+url: "https://blog.shilpamohandas.in"  # Site base URL
+
+author:
+  name: Shilpa MD
+  #github: ritijjain/pudhina-fresh # GitHub username, used for GitHub icon on the top right
+  #linkedin: ritijjain # Your LinkedIn profile url name, used for LinkedIn icon on the top right
+  email: mail@shilpamohandas.in # Used for email icon on the top right
+  homepage: https://Shilpamohandas.in  # This links to your name in post meta
+  #twitter: # Twitter username, used for Twitter Card Analytics 
+
+#disqus_name: # Setting this will turn on Disqus comments
+#g_track_id: # Google Analytics tracking ID (e.g. UA-000000-2), setting this will turn on Google Analytics
+
+markdown: kramdown
+
+defaults: # Recommended defaults, you may set your own
+  -
+    scope:
+      path: _posts
+    values:
+      comments: true
+  -
+    scope:
+      path: pages/redirects
+    values:
+      layout: redirect
+      index: false
+      listed: false
+  -
+    scope:
+      path: pages/tags
+    values:
+      layout: tag
+      sitemap:
+        priority: 0.4
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: true
+  profile: false
+  startings: [html, head, body]
+
+rss: false                # RSS feed icon on or off
+dark_mode: true           # Dark mode icon
+project_card_style: modal # Choose from masonry, modal, and flat
